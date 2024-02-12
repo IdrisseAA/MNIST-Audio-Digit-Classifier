@@ -13,7 +13,7 @@ REPORT_FOLDER = '../reports'
 MODELS_FOLDER = '../models'
 
 DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-MODEL_TYPES = ['lstm']  # ['hybrid', 'conv1d', 'lstm', 'cnn']
+MODEL_TYPES = ['hybrid', 'conv1d', 'lstm', 'cnn']
 
 if __name__ == "__main__":
     # Beginning of the execution.
