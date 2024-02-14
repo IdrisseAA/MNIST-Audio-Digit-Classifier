@@ -47,17 +47,11 @@ def create_production_data(processed_dataset_folder, production_dataset_folder):
     for digit_folder in tqdm(os.listdir(processed_dataset_folder), desc="Creating the production dataset"):
         digit_folder_path = os.path.join(processed_dataset_folder, digit_folder)
 
-        if os.path.isdir(digit_folder_path):
-            production_digit_folder = os.path.join(production_dataset_folder, digit_folder)
+        audio_files = os.listdir(digit_folder_path)
+        selected_files = random.sample(audio_files, min(2, (len(audio_files))))
 
-            if not os.path.exists(production_digit_folder):
-                os.makedirs(production_digit_folder)
-
-            audio_files = os.listdir(digit_folder_path)
-            selected_files = random.sample(audio_files, min(2, (len(audio_files))))
-
-            for selected_file in selected_files:
-                file_path = os.path.join(digit_folder_path, selected_file)
-                shutil.move(file_path, production_digit_folder)
+        for selected_file in selected_files:
+            file_path = os.path.join(digit_folder_path, selected_file)
+            shutil.move(file_path, production_dataset_folder)
 
     print("The production dataset has been created successfully!")

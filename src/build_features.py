@@ -68,11 +68,11 @@ def extract_audio_features(processed_dataset_folder, num_mels, digits):
 
     # Calculate max_time_steps after processing all the log power spectrograms
     max_time_steps = max(len(spec) for spec in features)
-    print(f'Max time steps: {max_time_steps}')
+    # print(f'Max time steps: {max_time_steps}')
 
     # Pad all the log power spectrograms to have the same number of time steps
     target_shape = (num_mels, max_time_steps)
-    print(f'Target shape: {target_shape}')
+    # print(f'Target shape: {target_shape}')
     padded_features = [pad_to_consistent_shape(np.array(feature), target_shape) for feature in features]
     final_features = [feature.tolist() for feature in padded_features]
 

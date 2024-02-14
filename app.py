@@ -78,7 +78,7 @@ def predict_using_hybrid(audio_file):
 # Welcome page
 @app.route("/")
 def welcome_function():
-    return "Welcome to AUDIO NUM DEEP CLASSIFIER"
+    return "Welcome to MNIST Audio Digit Classifier"
 
 
 if __name__ == "__main__":

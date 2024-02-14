@@ -59,7 +59,7 @@ if __name__ == "__main__":
                                         model_type=model_type, num_classes=len(DIGITS),
                                         num_epochs=5, batch_size=32)
 
-        # Call the function model to visualise the performance of the model in training and assess the model
+        # Call the function to visualise the performance of the model in training and assess the model
         print(f"\n{model_type} model performance in training & Assessment of the model ")
         model_performance_and_assessment(history=history, model=model, x_test=X_test, y_test=y_test, class_names=DIGITS,
                                          model_type=model_type, report_folder=REPORT_FOLDER)

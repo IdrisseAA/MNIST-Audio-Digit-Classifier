@@ -65,7 +65,7 @@ def model_training(x_train, x_val, y_train, y_val, model_type=None, num_classes=
 
     # Prepare the input shape of the model
     input_shape = x_train.shape[1:]
-    print(input_shape)
+    # print(input_shape)
 
     # Create and prepare the model based on the model type
     if model_type == 'cnn':

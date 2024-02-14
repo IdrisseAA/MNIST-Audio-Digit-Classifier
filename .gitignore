@@ -16,5 +16,12 @@ __pycache__/
 
 .idea/
 
+data/production_data/
+
+data/processed/
+
+models/
+
+reports/
 
 .git/
